@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Makanan - Produk & Keranjang</title>
+    <title>Snackflix - 12 RPL 2</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="./src/output.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -20,7 +20,7 @@
         }
 
         .gradient-bg {
-            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+           background: linear-gradient(135deg, #060512, #302b63, #24243e);
         }
 
         @keyframes fadeIn {
@@ -124,7 +124,7 @@
 
 <body class="gradient-bg text-gray-800">
     <!-- Navbar -->
-    <nav class="bg-orange-600 shadow-lg">
+    <nav class="bg-blue-800 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
@@ -136,14 +136,14 @@
                 <div class="hidden md:flex items-center space-x-4">
                     <a href="#products" class="text-white hover:text-orange-200">Produk</a>
                     <a href="#cart" class="text-white hover:text-orange-200">Sosial Media </a>
-                </div>
+                </div>  
                 <div class="md:hidden flex items-center">
                     <button id="mobile-menu-button" class="text-white focus:outline-none">
                         <i class="fas fa-bars"></i>
                     </button>
                 </div>
             </div>
-            <div id="mobile-menu" class="md:hidden bg-orange-600 px-2 pt-2 pb-3 space-y-1 transition duration-300 ease-in-out">
+            <div id="mobile-menu" class="md:hidden bg-blue-800 px-2 pt-2 pb-3 space-y-1 transition duration-300 ease-in-out">
                 <a href="#products" class="text-white block px-3 py-2 rounded-md text-base font-medium">Product</a>
                 <a href="#social-media" class="text-white block px-3 py-2 rounded-md text-base font-medium">Follow US</a>
             </div>
@@ -170,7 +170,7 @@
     </div>
 
     <!-- Tombol Keranjang Mobile -->
-    <div class="md:hidden fixed bottom-5 right-5 w-16 h-16 bg-orange-600 text-white rounded-full flex items-center justify-center shadow-lg cursor-pointer z-40"
+    <div class="md:hidden fixed bottom-5 right-5 w-16 h-16 bg-blue-700 text-white rounded-full flex items-center justify-center shadow-lg cursor-pointer z-40"
         id="cart-mobile-btn">
         <i class="fas fa-shopping-cart text-xl"></i>
     </div>
@@ -197,7 +197,7 @@
     <footer class="bg-gray-800 h-44 text-white text-center py-6 mt-16 flex flex-col items-center justify-center gap-4" id="social-media">
 
 
-                <p>&copy; 2025 SnackFlix.<br><span class="text-center text-xl">SMK TI MUHAMMADIYAH <br> CIKAMPEK.</span></p>
+                <p>&copy; 2025 SnackFlix.</p>
 
                         <div>
             <span class="block font-semibold mb-2">Ikuti kami di:</span>
@@ -212,13 +212,17 @@
 
         // Data produk
         const products = [
-            { id: 1, name: 'Nasi Goreng', price: 25000, image: 'img/img-produk/nasigoreng.jpg' },
-            { id: 2, name: 'Ayam Bakar', price: 30000, image: 'img/img-produk/ayam.jpeg' },
-            { id: 3, name: 'Sate Ayam', price: 20000, image: 'img/img-produk/sate.jpeg' },
-            { id: 4, name: 'Bakso', price: 15000, image: 'img/img-produk/bakso.jpg' },
-            { id: 5, name: 'Mie Ayam', price: 18000, image: 'img/img-produk/Mie Ayam.jpeg' },
-            { id: 6, name: 'Rendang', price: 35000, image: 'img/img-produk/rendang.jpeg' },
-            { id: 7, name: 'Rendang', price: 35000, image: 'img/img-produk/rendang.jpeg' },
+            { id: 1, name: 'Thaiyaki', price: "???", image: 'img/img-produk/taiyaki.jpg' },
+            { id: 2, name: 'Chesecuit', price: "???", image: 'img/img-produk/chesecuit.jpg' },
+            { id: 3, name: 'Dimsum Kuah Creamy', price: "???", image: 'img/img-produk/dimsumkuah.jpg' },
+            { id: 4, name: 'Baso Aci', price: "???", image: 'img/img-produk/boci.jpg' },
+            { id: 5, name: 'Milo Dino', price: "???", image: 'img/img-produk/milodino.jpg' },
+            { id: 6, name: 'Flixberry Mojito', price: "???", image: 'img/img-produk/flixberry.jpg' },
+            { id: 7, name: 'Paw Pudding ', price: "???", image: 'img/img-produk/pawPudding.jpg' },
+            { id: 8, name: 'Mochi Dango ', price: "???", image: 'img/img-produk/mochi.jpg' },
+            { id: 9, name: 'Crabby Mercon ', price: "???", image: 'img/img-produk/otak2.jpg' },
+            { id: 10, name: 'Samyang Roll', price: "???", image: 'img/img-produk/Samyang ori.jpg' },
+            { id: 11, name: 'Bunny Pudding', price: "???", image: 'img/img-produk/bunnyPudding.jpg' },
         ];
 
         let cart = [];
@@ -228,12 +232,12 @@
             const productContainer = document.getElementById('products');
             products.forEach(product => {
                 const productCard = `
-                    <div class="bg-white rounded-lg shadow-md overflow-hidden product-card">
-                        <img src="${product.image}" alt="${product.name}" class="w-full h-44 object-cover cursor-pointer transition-transform duration-200 transform hover:scale-120">
+                        <div class="bg-white rounded-lg shadow-md overflow-hidden product-card">
+                            <img src="${product.image}" alt="${product.name}" class="w-full h-40 md:h-40 lg:h-56 object-cover object-center cursor-pointer transition-transform duration-200 transform hover:scale-105">
                         <div class="p-4 text-center">
                             <h5 class="text-xl font-semibold mb-2">${product.name}</h5>
                             <p class="text-gray-600 mb-4">Harga: ${product.price.toLocaleString()} IDR</p>
-                            <button class="bg-orange-500 hover:bg-orange-600 text-white py-2 px-4 rounded-full w-full transform transition-transform duration-150 hover:scale-105 active:scale-95" onclick="addToCart(${product.id})">
+                            <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full w-full transform transition-transform duration-150 hover:scale-105 active:scale-95" onclick="addToCart(${product.id})">
                                 <i class="fas fa-cart-plus mr-2"></i> Tambah ke Keranjang
                             </button>
                         </div>
@@ -371,14 +375,14 @@
             const nomorWhatsApp = '6288809847754'; // Contoh: 6281234567890 (ganti sesuai nomor kamu)
 
             // Buat pesan WhatsApp dengan detail pesanan
-            let pesan = 'Halo, saya ingin memesan makanan berikut:\n\n';
+            let pesan = 'Halo min , saya ingin memesan makanan berikut:\n\n';
             let total = 0;
             cart.forEach(item => {
                 const subtotal = item.price * item.quantity;
                 total += subtotal;
-                pesan += `- ${item.name} (Qty: ${item.quantity}) - ${subtotal.toLocaleString()} IDR\n`;
+                pesan += `- ${item.name} (Qty: ${item.quantity}) - Rp.${subtotal.toLocaleString()} \n`;
             });
-            pesan += `\nTotal: ${total.toLocaleString()} IDR\n\nTerima kasih!`;
+            pesan += `\nTotal: Rp.${total.toLocaleString()}\n\nTerima kasih!`;
 
             // Encode pesan untuk URL
             const encodedPesan = encodeURIComponent(pesan);
