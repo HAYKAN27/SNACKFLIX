@@ -20,7 +20,7 @@
         }
 
         .gradient-bg {
-           background: linear-gradient(135deg, #060512, #302b63, #24243e);
+           background: linear-gradient(135deg, #6a0000, #73042b, #4a001a);
         }
 
         @keyframes fadeIn {
@@ -124,7 +124,7 @@
 
 <body class="gradient-bg text-gray-800">
     <!-- Navbar -->
-    <nav class="bg-blue-800 shadow-lg">
+    <nav class="bg-red-800 shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 ">
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
@@ -143,7 +143,7 @@
                     </button>
                 </div>
             </div>
-            <div id="mobile-menu" class="md:hidden bg-blue-800 px-2 pt-2 pb-3 space-y-1 transition duration-300 ease-in-out">
+            <div id="mobile-menu" class="md:hidden bg-red-800 px-2 pt-2 pb-3 space-y-1 transition duration-300 ease-in-out">
                 <a href="#products" class="text-white block px-3 py-2 rounded-md text-base font-medium">Product</a>
                 <a href="#social-media" class="text-white block px-3 py-2 rounded-md text-base font-medium">Follow US</a>
             </div>
@@ -170,7 +170,7 @@
     </div>
 
     <!-- Tombol Keranjang Mobile -->
-    <div class="md:hidden fixed bottom-5 right-5 w-16 h-16 bg-blue-700 text-white rounded-full flex items-center justify-center shadow-lg cursor-pointer z-40"
+    <div class="md:hidden fixed bottom-5 right-5 w-16 h-16 bg-red-700 text-white rounded-full flex items-center justify-center shadow-lg cursor-pointer z-40"
         id="cart-mobile-btn">
         <i class="fas fa-shopping-cart text-xl"></i>
     </div>
@@ -212,17 +212,17 @@
 
         // Data produk
         const products = [
-            { id: 1, name: 'Thaiyaki', price: "???", image: 'img/img-produk/taiyaki.jpg' },
-            { id: 2, name: 'Chesecuit', price: "???", image: 'img/img-produk/chesecuit.jpg' },
-            { id: 3, name: 'Dimsum Kuah Creamy', price: "???", image: 'img/img-produk/dimsumkuah.jpg' },
-            { id: 4, name: 'Baso Aci', price: "???", image: 'img/img-produk/boci.jpg' },
-            { id: 5, name: 'Milo Dino', price: "???", image: 'img/img-produk/milodino.jpg' },
-            { id: 6, name: 'Flixberry Mojito', price: "???", image: 'img/img-produk/flixberry.jpg' },
-            { id: 7, name: 'Paw Pudding ', price: "???", image: 'img/img-produk/pawPudding.jpg' },
-            { id: 8, name: 'Mochi Dango ', price: "???", image: 'img/img-produk/mochi.jpg' },
-            { id: 9, name: 'Crabby Mercon ', price: "???", image: 'img/img-produk/otak2.jpg' },
-            { id: 10, name: 'Samyang Roll', price: "???", image: 'img/img-produk/Samyang ori.jpg' },
-            { id: 11, name: 'Bunny Pudding', price: "???", image: 'img/img-produk/bunnyPudding.jpg' },
+            { id: 1, name: 'Thaiyaki', price: 7000, image: 'img/img-produk/taiyaki.jpg' },
+            { id: 2, name: 'Chesecuit', price: 7000, image: 'img/img-produk/chescuit.jpg' },
+            { id: 3, name: 'Dimsum Kuah Creamy', price: 14000, image: 'img/img-produk/dimsumkuah.jpg' },
+            { id: 4, name: 'Baso Aci', price: 6000, image: 'img/img-produk/boci.jpg' },
+            { id: 5, name: 'Milo Dino', price: 8000, image: 'img/img-produk/milodino.jpg' },
+            { id: 6, name: 'Flixberry Mojito', price: 8000, image: 'img/img-produk/flixberry.jpg' },
+            { id: 7, name: 'Sweetheart Pudding ', price: 5000, image: 'img/img-produk/sweetheart.png' },
+            { id: 8, name: 'Mochi Dango ', price: 10000, image: 'img/img-produk/mochi.jpg' },
+            { id: 9, name: 'Otak-otak Mercon ', price: 5000, image: 'img/img-produk/otak2.jpg' },
+            { id: 10, name: 'Samyang Roll', price: 13000, image: 'img/img-produk/Samyang ori.jpg' },
+            { id: 11, name: 'Bunny Pudding', price: 5000 , image: 'img/img-produk/bunnyPudding.jpg' },
         ];
 
         let cart = [];
@@ -237,7 +237,7 @@
                         <div class="p-4 text-center">
                             <h5 class="text-xl font-semibold mb-2">${product.name}</h5>
                             <p class="text-gray-600 mb-4">Harga: ${product.price.toLocaleString()} IDR</p>
-                            <button class="bg-blue-500 hover:bg-blue-600 text-white py-2 px-4 rounded-full w-full transform transition-transform duration-150 hover:scale-105 active:scale-95" onclick="addToCart(${product.id})">
+                            <button class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-full w-full transform transition-transform duration-150 hover:scale-105 active:scale-95" onclick="addToCart(${product.id})">
                                 <i class="fas fa-cart-plus mr-2"></i> Tambah ke Keranjang
                             </button>
                         </div>
